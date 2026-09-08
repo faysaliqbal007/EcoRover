@@ -1,0 +1,68 @@
+# ====================================================================
+# EcoRover Master Repository .gitignore
+# ====================================================================
+
+# Old development folder (official source is flutter-app/)
+ecorover_app/
+
+# Flutter & Dart
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+build/
+flutter-app/build/
+flutter-app/.dart_tool/
+flutter-app/.flutter-plugins
+flutter-app/.flutter-plugin-dependencies
+flutter-app/.packages
+
+# Android Native Build Outputs
+*.apk
+!release/*.apk
+*.aab
+.gradle/
+flutter-app/android/.gradle/
+flutter-app/android/local.properties
+flutter-app/android/app/build/
+
+# Internal Contribution Tracking
+CONTRIBUTIONS.txt
+CONTRIBUTIONS*.txt
+member_staging/
+
+# Arduino & Embedded Build Artifacts
+*.elf
+*.bin
+*.hex
+*.map
+*.o
+*.d
+*.tmp
+
+# IDE & Editor Files
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+.project
+.classpath
+.settings/
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Secrets & Environment
+.env
+.env.*
+secrets.h
+credentials.h
+
+# Temporary & Log Files
+*.log
+*.bak
+*.swp
+*~
