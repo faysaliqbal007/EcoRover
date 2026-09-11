@@ -1,0 +1,56 @@
+name: ecorover_app
+description: EcoRover Controller App — EXPLORE • BUILD • DISCOVER
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # HTTP client
+  http: ^1.2.2
+
+  # State management
+  flutter_riverpod: ^2.5.1
+
+  # Accelerometer
+  sensors_plus: ^7.0.0
+
+  # Permissions
+  permission_handler: ^11.3.1
+
+  # Save to gallery (photos + videos)
+  gal: ^2.3.0
+
+  # Open Android settings / URLs
+  url_launcher: ^6.3.1
+
+  # App version
+  package_info_plus: ^8.1.0
+
+  # Settings persistence
+  shared_preferences: ^2.3.2
+
+  # File paths
+  path_provider: ^2.1.4
+
+  # Keep screen on while controlling
+  wakelock_plus: ^1.2.8
+
+  # FFmpeg for MJPEG→MP4 recording
+  cupertino_icons: ^1.0.8
+  ffmpeg_kit_flutter_new: ^4.6.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
