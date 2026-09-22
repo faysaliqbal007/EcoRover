@@ -131,6 +131,20 @@ The EcoRover ecosystem utilizes a multi-node, decoupled IoT architecture. The ma
 
 *Figure 3: Flutter application manual driving screen showcasing the 3x3 mecanum D-pad, fast strafe buttons, pan/tilt servo sliders, driving speed regulator, and pulsing Emergency Stop.*
 
+---
+
+### Embedded Web Dashboard: Front Page (Manual Locomotion & Turret)
+<img src="docs/images/web-dashboard-manual.png" alt="EcoRover Web Dashboard Manual Drive" width="450"/>
+
+*Figure 4: Built-in ESP32 web dashboard front page (`dashboard.html`) featuring live FPV streaming, vertical camera tilt, 8-direction mecanum matrix, spin controls, and azimuth pan slider.*
+
+---
+
+### Embedded Web Dashboard: Smart Mode & Live Sensor Telemetry
+<img src="docs/images/web-dashboard-smart.png" alt="EcoRover Web Dashboard Smart Mode" width="450"/>
+
+*Figure 5: Built-in ESP32 web dashboard smart page (`dashboard.html`) featuring autonomous obstacle avoidance, phone motion driving, 5-color RGB lighting palette, and real-time 5-sensor telemetry dashboard.*
+
 </div>
 
 ---
@@ -148,7 +162,7 @@ EcoRover/
 ├── CHANGELOG.md                        # Production release history & versioning
 │
 ├── release/                            # Pre-built production binaries
-│   ├── EcoRover-v1.0.0.apk             # Ready-to-install Android APK (API 24 to 34)
+│   ├── EcoRover.apk                    # Ready-to-install Universal Android APK (API 24 to 34)
 │   └── README.md                       # Sideloading & installation guide
 │
 ├── firmware/                           # Embedded microcontroller firmware
