@@ -1,22 +1,24 @@
 <div align="center">
 
-<img src="assets/images/ecorover_logo.png" alt="EcoRover Logo" width="180"/>
+<img src="../docs/images/ecorover_banner.png" alt="EcoRover Banner" width="750"/>
+<br/><br/>
+<img src="../docs/images/ecorover-app-icon.png" alt="EcoRover App Icon" width="140"/>
 
-# 🤖 EcoRover
+# EcoRover
 
-### Mecanum Wheel Robot Rover Controller
+### Mecanum Wheel Robot Rover Mobile Controller
 
 **EXPLORE • BUILD • DISCOVER**
 
-[![Flutter](https://img.shields.io/badge/Flutter-3.47.5-02569B?logo=flutter&logoColor=white)](https://flutter.dev)
-[![Dart](https://img.shields.io/badge/Dart-3.3+-0175C2?logo=dart&logoColor=white)](https://dart.dev)
-[![Platform](https://img.shields.io/badge/Platform-Android-3DDC84?logo=android&logoColor=white)](https://developer.android.com)
-[![ESP32](https://img.shields.io/badge/Hardware-ESP32-E7352C?logo=espressif&logoColor=white)](https://www.espressif.com)
-[![License](https://img.shields.io/badge/License-Academic-blue)]()
+[![Flutter](https://img.shields.io/badge/Flutter-3.47.5-02569B?style=for-the-badge&logo=flutter)](https://flutter.dev)
+[![Dart](https://img.shields.io/badge/Dart-3.3+-0175C2?style=for-the-badge&logo=dart)](https://dart.dev)
+[![Platform](https://img.shields.io/badge/Platform-Android_API_24+-3DDC84?style=for-the-badge&logo=android)](https://developer.android.com)
+[![Hardware](https://img.shields.io/badge/Hardware-ESP32--S3-E7352C?style=for-the-badge&logo=espressif)](https://www.espressif.com)
+[![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](../LICENSE)
 
 ---
 
-*A feature-rich Android application for controlling an ESP32-powered mecanum-wheel robot rover with real-time camera streaming, autonomous navigation, phone-tilt motion control, and telemetry monitoring.*
+*A high-performance Android mobile application built with Flutter &amp; Riverpod for controlling an ESP32-powered mecanum-wheel rover with real-time MJPEG camera streaming, autonomous navigation, gyroscopic phone-tilt motion control, and live 5-sensor telemetry.*
 
 </div>
 

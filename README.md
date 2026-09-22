@@ -8,7 +8,7 @@
 
 ### ESP32-S3 Smart Rover with Wi-Fi Control, Autonomous Navigation, Phone Motion Control, Live ESP32-CAM Streaming, Sensor Monitoring, and a Flutter Mobile Application
 
-[![Release](https://img.shields.io/badge/Release-v1.0.0-00E5FF?style=for-the-badge&logo=github)](https://github.com/)
+[![Release](https://img.shields.io/badge/Release-v1.0.0-00E5FF?style=for-the-badge&logo=github)](https://github.com/faysaliqbal007/EcoRover/releases)
 [![Download APK](https://img.shields.io/badge/Download_APK-EcoRover.apk-brightgreen?style=for-the-badge&logo=android)](release/EcoRover.apk)
 [![Firmware](https://img.shields.io/badge/Firmware-V6_Production-D4AF37?style=for-the-badge&logo=arduino)](firmware/)
 [![Controller](https://img.shields.io/badge/MCU-ESP32--S3_N16R8-red?style=for-the-badge&logo=espressif)](hardware/)
