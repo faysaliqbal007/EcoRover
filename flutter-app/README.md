@@ -102,6 +102,34 @@ The app communicates with the rover over a **Wi-Fi Access Point** hosted by the 
 
 ---
 
+## 📱 Screenshots & User Interfaces
+
+<table align="center" width="100%">
+  <tr>
+    <th width="33.3%" align="center"><b>Manual Locomotion</b></th>
+    <th width="33.3%" align="center"><b>Smart Mode &amp; Telemetry</b></th>
+    <th width="33.3%" align="center"><b>Settings &amp; Diagnostics</b></th>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="../docs/images/manual-mode.png" alt="Manual Mode" width="100%"/>
+    </td>
+    <td align="center">
+      <img src="../docs/images/smart-mode.png" alt="Smart Mode" width="100%"/>
+    </td>
+    <td align="center">
+      <img src="../docs/images/settings.png" alt="Settings Mode" width="100%"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Live FPV camera stream, 180° pan/tilt servos, PWM speed regulator, 3x3 mecanum D-pad</sub></td>
+    <td align="center"><sub>Autonomous obstacle avoidance, phone motion tilt steering, RGB presets &amp; 5-sensor dashboard</sub></td>
+    <td align="center"><sub>Controller IP, camera stream endpoint, UDP port configuration &amp; battery diagnostics</sub></td>
+  </tr>
+</table>
+
+---
+
 ## 🏛️ System Architecture
 
 ```
@@ -355,14 +383,12 @@ A comprehensive **55-step hardware verification checklist** is available at **[d
 ---
 
 ## 👥 Contributors
-
-| Member | Role | Domain |
-|--------|------|--------|
-| **Member A** | Manual Locomotion & Design System | Drive controls, servos, theme, API docs |
-| **Member B** | Autonomy, Motion & Telemetry | Sensors, UDP, accelerometer, tests |
-| **Member C** | Camera, Media & Android Native | MJPEG streaming, video recording, app shell |
-
-See [CONTRIBUTIONS.txt](CONTRIBUTIONS.txt) for detailed per-member file assignments and commit breakdown.
+ 
+| Contributor | Role & Technical Domain | Key Deliverables |
+|:---|:---|:---|
+| **M M Faysal Iqbal** | **Lead Architecture & Manual Locomotion** | Drive controls, servo pan/tilt, design system, theme tokens, REST API integration |
+| **Ishraq Alam Khan** | **Vision Systems & Video Streaming** | ESP32-CAM MJPEG video parser, camera HUD overlay, hardware verification |
+| **Nahid Hasan Nafi** | **Autonomy, Motion & Telemetry** | Smart autonomous mode, phone tilt UDP engine, Riverpod state, automated test suite |
 
 ---
 

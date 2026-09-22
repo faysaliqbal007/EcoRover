@@ -114,33 +114,45 @@ The EcoRover ecosystem utilizes a multi-node, decoupled IoT architecture. The ma
 
 <div align="center">
 
-### EcoRover Project Banner & Brand Logo
 <img src="docs/images/ecorover_banner.png" alt="EcoRover Banner" width="750"/>
 <br/><br/>
-<img src="docs/images/ecorover-app-icon.png" alt="EcoRover Logo" width="180"/>
+<img src="docs/images/ecorover-app-icon.png" alt="EcoRover Logo" width="160"/>
 
-*Figure 1: Official EcoRover brand identity, banner, and application icon logo.*
+<br/><br/>
 
----
-
-### Manual Mode (Drive Control & Live FPV Viewport)
-<img src="docs/images/manual-mode.png" alt="EcoRover Manual Mode" width="450"/>
-
-*Figure 2: Manual locomotion interface featuring live camera stream, 180° camera tilt slider, speed adjustment, 8-direction mecanum matrix, and azimuth pan controls.*
-
----
-
-### Smart Mode (Autonomous Navigation & Live Sensor Telemetry)
-<img src="docs/images/smart-mode.png" alt="EcoRover Smart Mode" width="450"/>
-
-*Figure 3: Smart autonomy interface featuring self-navigating obstacle avoidance, phone motion tilt steering, 5-color RGB lighting palette, and real-time sensor telemetry.*
-
----
-
-### Settings & Hardware Configuration
-<img src="docs/images/settings.png" alt="EcoRover Settings" width="450"/>
-
-*Figure 4: System configuration interface displaying network endpoints (ESP32-S3 controller IP, ESP32-CAM stream URL, UDP port) and 2200 mAh 3S lithium battery diagnostics.*
+<table align="center" width="100%">
+  <thead>
+    <tr>
+      <th width="33.3%" align="center"><b>Manual Locomotion Mode</b></th>
+      <th width="33.3%" align="center"><b>Smart Autonomy &amp; Telemetry</b></th>
+      <th width="33.3%" align="center"><b>Hardware Settings &amp; Diagnostics</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center" valign="top">
+        <img src="docs/images/manual-mode.png" alt="Manual Mode" width="100%"/>
+      </td>
+      <td align="center" valign="top">
+        <img src="docs/images/smart-mode.png" alt="Smart Mode" width="100%"/>
+      </td>
+      <td align="center" valign="top">
+        <img src="docs/images/settings.png" alt="Settings Mode" width="100%"/>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" valign="top">
+        <sub><b>Manual Drive &amp; Turret</b><br/>Live FPV camera stream, 180° pan/tilt servos, PWM speed regulator &amp; 3×3 mecanum D-pad</sub>
+      </td>
+      <td align="center" valign="top">
+        <sub><b>Autonomous &amp; Sensors</b><br/>Obstacle avoidance, phone tilt motion steering, 5-color RGB lighting &amp; real-time sensor dashboard</sub>
+      </td>
+      <td align="center" valign="top">
+        <sub><b>System Configuration</b><br/>Controller &amp; camera stream IPs, UDP port, 2200 mAh 3S battery monitoring &amp; node diagnostics</sub>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 </div>
 
