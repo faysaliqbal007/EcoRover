@@ -114,12 +114,6 @@ The EcoRover ecosystem utilizes a multi-node, decoupled IoT architecture. The ma
 
 <div align="center">
 
-<img src="docs/images/ecorover_banner.png" alt="EcoRover Banner" width="750"/>
-<br/><br/>
-<img src="docs/images/ecorover-app-icon.png" alt="EcoRover Logo" width="160"/>
-
-<br/><br/>
-
 <table align="center" width="100%">
   <thead>
     <tr>
