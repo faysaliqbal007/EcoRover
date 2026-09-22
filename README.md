@@ -1,6 +1,8 @@
 <div align="center">
 
-<img src="docs/images/ecorover_banner.png" alt="EcoRover Logo" width="850"/>
+<img src="docs/images/ecorover_banner.png" alt="EcoRover Banner" width="850"/>
+<br/><br/>
+<img src="docs/images/ecorover-app-icon.png" alt="EcoRover Logo" width="160"/>
 
 # EcoRover
 
@@ -112,38 +114,33 @@ The EcoRover ecosystem utilizes a multi-node, decoupled IoT architecture. The ma
 
 <div align="center">
 
-### EcoRover Robotic Vehicle & Physical Hardware
-<img src="docs/images/rover-front.jpg" alt="EcoRover Robot Front" width="800"/>
+### EcoRover Project Banner & Brand Logo
+<img src="docs/images/ecorover_banner.png" alt="EcoRover Banner" width="750"/>
+<br/><br/>
+<img src="docs/images/ecorover-app-icon.png" alt="EcoRover Logo" width="180"/>
 
-*Figure 1: Fully assembled EcoRover robot chassis featuring 4 mecanum omnidirectional wheels, front ultrasonic bumper, and dual-axis pan/tilt ESP32-CAM turret.*
-
----
-
-### Hardware Circuit & Wiring Schematic
-<img src="hardware/circuit-diagram/EcoRover_Circuit.png" alt="EcoRover Circuit Schematic" width="850"/>
-
-*Figure 2: Complete verified wiring architecture showing isolated 12V motor and 5V logic rails, common ground bus, dual L298N drivers, and voltage dividers.*
+*Figure 1: Official EcoRover brand identity, banner, and application icon logo.*
 
 ---
 
-### Flutter Mobile App: Manual Locomotion & Turret Controls
-<img src="docs/images/flutter-app.png" alt="Flutter Mobile App Manual Screen" width="400"/>
+### Manual Mode (Drive Control & Live FPV Viewport)
+<img src="docs/images/manual-mode.png" alt="EcoRover Manual Mode" width="450"/>
 
-*Figure 3: Flutter application manual driving screen showcasing the 3x3 mecanum D-pad, fast strafe buttons, pan/tilt servo sliders, driving speed regulator, and pulsing Emergency Stop.*
-
----
-
-### Embedded Web Dashboard: Front Page (Manual Locomotion & Turret)
-<img src="docs/images/web-dashboard-manual.png" alt="EcoRover Web Dashboard Manual Drive" width="450"/>
-
-*Figure 4: Built-in ESP32 web dashboard front page (`dashboard.html`) featuring live FPV streaming, vertical camera tilt, 8-direction mecanum matrix, spin controls, and azimuth pan slider.*
+*Figure 2: Manual locomotion interface featuring live camera stream, 180° camera tilt slider, speed adjustment, 8-direction mecanum matrix, and azimuth pan controls.*
 
 ---
 
-### Embedded Web Dashboard: Smart Mode & Live Sensor Telemetry
-<img src="docs/images/web-dashboard-smart.png" alt="EcoRover Web Dashboard Smart Mode" width="450"/>
+### Smart Mode (Autonomous Navigation & Live Sensor Telemetry)
+<img src="docs/images/smart-mode.png" alt="EcoRover Smart Mode" width="450"/>
 
-*Figure 5: Built-in ESP32 web dashboard smart page (`dashboard.html`) featuring autonomous obstacle avoidance, phone motion driving, 5-color RGB lighting palette, and real-time 5-sensor telemetry dashboard.*
+*Figure 3: Smart autonomy interface featuring self-navigating obstacle avoidance, phone motion tilt steering, 5-color RGB lighting palette, and real-time sensor telemetry.*
+
+---
+
+### Settings & Hardware Configuration
+<img src="docs/images/settings.png" alt="EcoRover Settings" width="450"/>
+
+*Figure 4: System configuration interface displaying network endpoints (ESP32-S3 controller IP, ESP32-CAM stream URL, UDP port) and 2200 mAh 3S lithium battery diagnostics.*
 
 </div>
 
