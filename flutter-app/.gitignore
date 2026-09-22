@@ -1,0 +1,94 @@
+# ====================================
+# EcoRover App — Git Ignore Rules
+# ====================================
+
+# ──────────────────────────────────────
+# Miscellaneous
+# ──────────────────────────────────────
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+Thumbs.db
+*.bak
+*.tmp
+
+# ──────────────────────────────────────
+# IDE — IntelliJ / Android Studio
+# ──────────────────────────────────────
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# ──────────────────────────────────────
+# IDE — VS Code
+# ──────────────────────────────────────
+# .vscode/
+
+# ──────────────────────────────────────
+# Flutter / Dart / Pub
+# ──────────────────────────────────────
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+/coverage/
+.packages
+
+# ──────────────────────────────────────
+# Symbolication & Obfuscation
+# ──────────────────────────────────────
+app.*.symbols
+app.*.map.json
+
+# ──────────────────────────────────────
+# Android
+# ──────────────────────────────────────
+/android/app/debug
+/android/app/profile
+/android/app/release
+android/local.properties
+android/.gradle/
+android/captures/
+android/gradlew
+android/gradlew.bat
+**/android/**/GeneratedPluginRegistrant.java
+local.properties
+
+# ──────────────────────────────────────
+# Kotlin
+# ──────────────────────────────────────
+.kotlin/
+
+# ──────────────────────────────────────
+# Widget Preview
+# ──────────────────────────────────────
+.widget_preview/
+
+# ──────────────────────────────────────
+# Generated Files
+# ──────────────────────────────────────
+*.g.dart
+*.freezed.dart
+*.mocks.dart
+
+# ──────────────────────────────────────
+# Sensitive / Environment
+# ──────────────────────────────────────
+.env
+*.keystore
+*.jks
+key.properties
