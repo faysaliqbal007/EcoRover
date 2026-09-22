@@ -45,7 +45,7 @@ button,input,select{font:inherit}button{cursor:pointer;user-select:none;-webkit-
     <div class="titleArea"><div class="wheelIcon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="2"></circle><path d="M12 4v6M5 13l5-1M19 13l-5-1M8 19l3-5M16 19l-3-5"></path></svg></div><div class="titleCopy"><div id="pageTitle" class="mainTitle">Drive Control</div><div id="pageSub" class="subTitle">Manual Driving</div></div></div>
     <button id="captureBtn" class="barBtn" type="button" aria-label="Capture"><svg viewBox="0 0 24 24"><path d="M4 8h3l2-2h6l2 2h3v11H4z"></path><circle cx="12" cy="13" r="4"></circle></svg></button>
     <button id="recordBtn" class="barBtn" type="button" aria-label="Record"><span class="recordDotIcon"></span></button>
-    <select id="pageSelect" class="modeSelect"><option value="manual">Manual Mode</option><option value="smart">Smart Mode</option></select>
+    <select id="pageSelect" class="modeSelect"><option value="manual">Manual Mode</option><option value="smart">Smart Mode</option><option value="settings">Settings</option></select>
     <div class="modeStatus"><span class="dot"></span><span id="modeText">Idle</span></div>
   </div>
 
@@ -79,7 +79,7 @@ button,input,select{font:inherit}button{cursor:pointer;user-select:none;-webkit-
       </div>
       <div class="smartLower">
         <div id="rgbCard" class="inner"><div class="innerTitle">RGB Control</div><div class="innerSub">Select LED color</div><div class="colors"><button class="color red" data-color="red" type="button"></button><button class="color green" data-color="green" type="button"></button><button class="color blue" data-color="blue" type="button"></button><button class="color yellow" data-color="yellow" type="button"></button><button class="color white" data-color="white" type="button"></button></div><div class="switchRow"><span>RGB Power</span><label class="switch"><input id="rgbSwitch" type="checkbox"><span class="switchUI"></span></label></div><div id="rgbNote" class="autoNote">OFF = automatic obstacle warning</div></div>
-        <div class="inner"><div class="innerTitle">Sensor Dashboard</div><div class="innerSub">Live sensor data</div><div class="sensor"><span class="sensorName">Front Ultrasonic</span><span id="frontValue" class="sensorValue">--</span></div><div class="sensor"><span class="sensorName">Rear Ultrasonic</span><span id="rearValue" class="sensorValue">--</span></div><div class="sensor"><span class="sensorName">Right IR</span><span id="rightIR" class="sensorValue">--</span></div><div class="sensor"><span class="sensorName">LDR</span><span id="ldrValue" class="sensorValue">--</span></div><div class="sensor"><span class="sensorName">Obstacle</span><span id="obstacleValue" class="sensorValue">--</span></div></div>
+        <div class="inner"><div class="innerTitle">Sensor Dashboard</div><div class="innerSub">Live sensor data</div><div class="sensor"><span class="sensorName">Front Ultrasonic</span><span id="frontValue" class="sensorValue">37.1 cm</span></div><div class="sensor"><span class="sensorName">Rear Ultrasonic</span><span id="rearValue" class="sensorValue">45.0 cm</span></div><div class="sensor"><span class="sensorName">Right IR</span><span id="rightIR" class="sensorValue">CLEAR</span></div><div class="sensor"><span class="sensorName">LDR Ambient</span><span id="ldrValue" class="sensorValue">842</span></div><div class="sensor"><span class="sensorName">Obstacle Status</span><span id="obstacleValue" class="sensorValue">CLEAR</span></div></div>
       </div>
     </div>
     <div class="panel"><div class="innerTitle">Additional Options</div><div class="options">
@@ -87,6 +87,46 @@ button,input,select{font:inherit}button{cursor:pointer;user-select:none;-webkit-
       <div id="headlightCard" class="option"><div class="optionTitle">Headlight</div><div class="optionBottom"><span id="headlightState" class="tiny">AUTO</span><label class="switch"><input id="headlightSwitch" type="checkbox"><span class="switchUI"></span></label></div></div>
       <div class="option"><div class="optionTitle">Recording</div><div class="optionBottom"><span class="soon">FLUTTER</span></div></div>
     </div></div>
+  </div>
+
+  <div id="settingsPage" class="hidden">
+    <div class="panel">
+      <div class="innerTitle" style="margin-bottom:2px;">Network Configuration</div>
+      <div class="innerSub" style="margin-bottom:10px;">Rover Access Point and ESP32-CAM stream endpoints</div>
+      <div style="display:grid;gap:8px;">
+        <div>
+          <span style="font-size:9px;font-weight:900;color:#7d8da8;display:block;margin-bottom:3px;">CONTROLLER IP (ESP32-S3)</span>
+          <input type="text" value="192.168.4.1" readonly style="width:100%;height:36px;padding:0 10px;border:1px solid var(--line);border-radius:10px;font-weight:700;color:var(--navy);background:#f9fcff;">
+        </div>
+        <div>
+          <span style="font-size:9px;font-weight:900;color:#7d8da8;display:block;margin-bottom:3px;">CAMERA STREAM IP (ESP32-CAM)</span>
+          <input type="text" value="192.168.4.200" readonly style="width:100%;height:36px;padding:0 10px;border:1px solid var(--line);border-radius:10px;font-weight:700;color:var(--navy);background:#f9fcff;">
+        </div>
+        <div>
+          <span style="font-size:9px;font-weight:900;color:#7d8da8;display:block;margin-bottom:3px;">UDP CONTROL &amp; TELEMETRY PORT</span>
+          <input type="text" value="4210" readonly style="width:100%;height:36px;padding:0 10px;border:1px solid var(--line);border-radius:10px;font-weight:700;color:var(--navy);background:#f9fcff;">
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="innerTitle" style="margin-bottom:2px;">Power &amp; Battery Diagnostics</div>
+      <div class="innerSub" style="margin-bottom:8px;">Hardware power rail status and battery telemetry</div>
+      <div class="sensor"><span class="sensorName">Battery Chemistry</span><span class="sensorValue" style="color:var(--blue);">3S Lithium-Ion (2200 mAh)</span></div>
+      <div class="sensor"><span class="sensorName">Pack Voltage</span><span class="sensorValue" style="color:var(--green);">12.58 V (98% Capacity)</span></div>
+      <div class="sensor"><span class="sensorName">Logic Rail (Step-Down)</span><span class="sensorValue" style="color:var(--green);">5.02 V Regulated</span></div>
+      <div class="sensor"><span class="sensorName">Motor Drivers Rail</span><span class="sensorValue" style="color:var(--green);">12.58 V Direct Bus</span></div>
+    </div>
+
+    <div class="panel">
+      <div class="innerTitle" style="margin-bottom:2px;">Firmware &amp; System Info</div>
+      <div class="innerSub" style="margin-bottom:8px;">Subsystem nodes and architecture</div>
+      <div class="sensor"><span class="sensorName">Main Controller</span><span class="sensorValue" style="color:var(--navy);">ESP32-S3-WROOM-1 N16R8</span></div>
+      <div class="sensor"><span class="sensorName">Firmware Build</span><span class="sensorValue" style="color:var(--navy);">v1.0.0 (Production V6)</span></div>
+      <div class="sensor"><span class="sensorName">Active Sensors</span><span class="sensorValue" style="color:var(--green);">5 / 5 Online</span></div>
+      <div class="sensor"><span class="sensorName">Wi-Fi AP SSID</span><span class="sensorValue" style="color:var(--green);">EcoRover (Channel 1)</span></div>
+      <button id="saveConfigBtn" type="button" style="width:100%;height:40px;margin-top:12px;border:0;border-radius:12px;background:linear-gradient(90deg,#079af0,#16c4ec);color:#fff;font-weight:900;font-size:12px;cursor:pointer;">SAVE CONFIGURATION</button>
+    </div>
   </div>
 
   <button id="emergency" class="emergency" type="button">&#9888;&nbsp; EMERGENCY STOP</button>
@@ -99,15 +139,41 @@ const cameraCard=document.getElementById("cameraCard"),camera=document.getElemen
 function request(path){return fetch(path,{cache:"no-store"}).catch(function(){});}function toast(message){const e=document.getElementById("toast");e.textContent=message;e.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(function(){e.classList.remove("show");},2200);}function safePercent(v,fallback){const n=Number(v);if(!Number.isFinite(n))return fallback;return Math.max(0,Math.min(100,n));}
 function clearDriveHighlight(){document.querySelectorAll(".driveAction").forEach(function(b){b.classList.remove("active");});activeDrive=null;}function highlightDrive(button){clearDriveHighlight();if(button){button.classList.add("active");activeDrive=button;}}function manualDrive(command,button){highlightDrive(button);request("/api/manual/"+command);}function manualStop(){clearDriveHighlight();request("/api/manual/stop");}function bindDrive(id,command){const b=document.getElementById(id);b.addEventListener("click",function(e){e.preventDefault();manualDrive(command,b);});}
 bindDrive("forward","forward");bindDrive("backward","backward");bindDrive("left","left");bindDrive("right","right");bindDrive("spinLeft","spin-left");bindDrive("spinRight","spin-right");bindDrive("diagFL","diag-fl");bindDrive("diagFR","diag-fr");bindDrive("diagBL","diag-bl");bindDrive("diagBR","diag-br");bindDrive("fastLeft","strafe-left");bindDrive("fastRight","strafe-right");document.getElementById("stopBtn").addEventListener("click",manualStop);
-function updatePageChrome(){const smart=document.getElementById("pageSelect").value==="smart";document.getElementById("manualPage").classList.toggle("hidden",smart);document.getElementById("smartPage").classList.toggle("hidden",!smart);document.getElementById("pageTitle").textContent=smart?"Smart Control":"Drive Control";document.getElementById("pageSub").textContent=smart?"Advanced Features":"Manual Driving";updateModeLabel(currentMode);}function updateModeLabel(mode){const smart=document.getElementById("pageSelect").value==="smart";let text;if(smart){text=mode==="AUTONOMOUS"?"Auto":mode==="MOTION"?"Motion":"Ready";}else{text=mode==="MANUAL"?"Manual":"Idle";}document.getElementById("modeText").textContent=text;}
+function updatePageChrome(){
+  const val=document.getElementById("pageSelect").value;
+  document.getElementById("manualPage").classList.toggle("hidden",val!=="manual");
+  document.getElementById("smartPage").classList.toggle("hidden",val!=="smart");
+  document.getElementById("settingsPage").classList.toggle("hidden",val!=="settings");
+  if(val==="manual"){
+    document.getElementById("pageTitle").textContent="Drive Control";
+    document.getElementById("pageSub").textContent="Manual Driving";
+  }else if(val==="smart"){
+    document.getElementById("pageTitle").textContent="Smart Control";
+    document.getElementById("pageSub").textContent="Advanced Features";
+  }else{
+    document.getElementById("pageTitle").textContent="Configuration";
+    document.getElementById("pageSub").textContent="Settings & Diagnostics";
+  }
+  updateModeLabel(currentMode);
+}
+function updateModeLabel(mode){const smart=document.getElementById("pageSelect").value==="smart";let text;if(smart){text=mode==="AUTONOMOUS"?"Auto":mode==="MOTION"?"Motion":"Ready";}else{text=mode==="MANUAL"?"Manual":"Idle";}document.getElementById("modeText").textContent=text;}
 document.getElementById("pageSelect").addEventListener("change",function(){clearDriveHighlight();request("/api/idle");updatePageChrome();});
+const urlParams = new URLSearchParams(window.location.search);
+const hash = window.location.hash;
+if (urlParams.get("mode") === "smart" || hash === "#smart") {
+  document.getElementById("pageSelect").value = "smart";
+  updatePageChrome();
+} else if (urlParams.get("mode") === "settings" || hash === "#settings") {
+  document.getElementById("pageSelect").value = "settings";
+  updatePageChrome();
+}
 document.getElementById("speed").addEventListener("input",function(){const v=safePercent(this.value,50);document.getElementById("speedText").textContent=v+"%";clearTimeout(speedTimer);speedTimer=setTimeout(function(){request("/api/manual/speed?percent="+v);},70);});document.getElementById("tilt").addEventListener("input",function(){const v=Number(this.value);document.getElementById("tiltText").innerHTML=v+"&deg;";clearTimeout(tiltTimer);tiltTimer=setTimeout(function(){request("/api/tilt?angle="+v);},70);});
 function setPanFromWeb(value){value=Math.max(0,Math.min(180,Number(value)));document.getElementById("pan").value=value;document.getElementById("panText").innerHTML=value+"&deg;";clearTimeout(panTimer);panTimer=setTimeout(function(){request("/api/pan?angle="+value);},70);}document.getElementById("pan").addEventListener("input",function(){setPanFromWeb(this.value);});document.getElementById("panMinus").addEventListener("click",function(){setPanFromWeb(Number(document.getElementById("pan").value)-5);});document.getElementById("panPlus").addEventListener("click",function(){setPanFromWeb(Number(document.getElementById("pan").value)+5);});
 document.getElementById("autoBtn").addEventListener("click",function(){clearDriveHighlight();request(currentMode==="AUTONOMOUS"?"/api/auto/stop":"/api/auto/start");});document.getElementById("autoSpeed").addEventListener("input",function(){const v=safePercent(this.value,50);document.getElementById("autoSpeedText").textContent=v+"%";clearTimeout(autoSpeedTimer);autoSpeedTimer=setTimeout(function(){request("/api/auto/speed?percent="+v);},70);});document.getElementById("motionBtn").addEventListener("click",function(){clearDriveHighlight();request(currentMode==="MOTION"?"/api/motion/stop":"/api/motion/start");});document.getElementById("sensitivity").addEventListener("input",function(){const v=safePercent(this.value,50);document.getElementById("sensitivityText").textContent=v+"%";clearTimeout(sensitivityTimer);sensitivityTimer=setTimeout(function(){request("/api/motion/sensitivity?percent="+v);},70);});
 document.querySelectorAll(".color").forEach(function(button){button.addEventListener("click",function(){if(button.disabled)return;const c=button.dataset.color;document.querySelectorAll(".color").forEach(function(x){x.classList.remove("active");});button.classList.add("active");document.getElementById("rgbSwitch").checked=true;request("/api/rgb/color?name="+encodeURIComponent(c));});});document.getElementById("rgbSwitch").addEventListener("change",function(){if(this.disabled)return;request(this.checked?"/api/rgb/on":"/api/rgb/off");});document.getElementById("buzzerSwitch").addEventListener("change",function(){if(this.disabled)return;request(this.checked?"/api/buzzer/on":"/api/buzzer/off");});document.getElementById("headlightSwitch").addEventListener("change",function(){if(this.disabled)return;request(this.checked?"/api/headlight/on":"/api/headlight/off");});
 function applyAccessoryLocks(locked){document.getElementById("rgbCard").classList.toggle("locked",locked);document.getElementById("buzzerCard").classList.toggle("locked",locked);document.getElementById("headlightCard").classList.toggle("locked",locked);document.getElementById("rgbSwitch").disabled=locked;document.getElementById("buzzerSwitch").disabled=locked;document.getElementById("headlightSwitch").disabled=locked;document.querySelectorAll(".color").forEach(function(b){b.disabled=locked;});document.getElementById("rgbNote").textContent=locked?"Automatic during Auto / Motion":"OFF = automatic obstacle warning";}
 document.getElementById("fitBtn").addEventListener("click",function(){cameraFit=cameraFit==="cover"?"contain":"cover";camera.style.objectFit=cameraFit;this.textContent=cameraFit==="cover"?"FILL":"FIT";});function applyZoom(value){cameraZoom=Math.max(1,Math.min(3,Number(value)));cameraZoom=Math.round(cameraZoom*10)/10;zoom.value=cameraZoom;camera.style.transform="scale("+cameraZoom+")";document.getElementById("zoomText").textContent=cameraZoom.toFixed(1)+"x";}zoom.addEventListener("input",function(){applyZoom(this.value);});document.getElementById("zoomOut").addEventListener("click",function(){applyZoom(cameraZoom-.1);});document.getElementById("zoomIn").addEventListener("click",function(){applyZoom(cameraZoom+.1);});function enterPseudoFull(){pseudoFull=true;cameraCard.classList.add("pseudoFull");document.body.style.overflow="hidden";}function exitPseudoFull(){pseudoFull=false;cameraCard.classList.remove("pseudoFull");document.body.style.overflow="";}async function enterFull(){clearDriveHighlight();request("/api/idle");try{if(cameraCard.requestFullscreen){await cameraCard.requestFullscreen();}else{enterPseudoFull();}}catch(e){enterPseudoFull();}}async function exitFull(){if(pseudoFull){exitPseudoFull();return;}try{if(document.fullscreenElement&&document.exitFullscreen){await document.exitFullscreen();}}catch(e){exitPseudoFull();}}document.getElementById("fullBtn").addEventListener("click",enterFull);document.getElementById("exitFullBtn").addEventListener("click",exitFull);document.addEventListener("fullscreenchange",function(){if(!document.fullscreenElement)exitPseudoFull();});
-document.getElementById("captureBtn").addEventListener("click",function(){toast("Photo capture will be saved by the Flutter app.");});document.getElementById("recordBtn").addEventListener("click",function(){toast("Video recording will be saved by the Flutter app.");});document.getElementById("settings").addEventListener("click",function(){toast("Settings can be added later.");});document.getElementById("emergency").addEventListener("click",function(){clearDriveHighlight();request("/api/emergency");});
+document.getElementById("captureBtn").addEventListener("click",function(){toast("Photo capture will be saved by the Flutter app.");});document.getElementById("recordBtn").addEventListener("click",function(){toast("Video recording will be saved by the Flutter app.");});document.getElementById("settings").addEventListener("click",function(){document.getElementById("pageSelect").value="settings";updatePageChrome();});document.getElementById("saveConfigBtn").addEventListener("click",function(){toast("Settings saved successfully.");});document.getElementById("emergency").addEventListener("click",function(){clearDriveHighlight();request("/api/emergency");});
 const driveIdByState={FORWARD:"forward",BACKWARD:"backward",LEFT:"left",RIGHT:"right",STRAFE_LEFT:"fastLeft",STRAFE_RIGHT:"fastRight",SPIN_LEFT:"spinLeft",SPIN_RIGHT:"spinRight",DIAG_FL:"diagFL",DIAG_FR:"diagFR",DIAG_BL:"diagBL",DIAG_BR:"diagBR"};
 function refreshStatus(){fetch("/api/status",{cache:"no-store"}).then(function(r){return r.json();}).then(function(data){currentMode=data.mode||"IDLE";updateModeLabel(currentMode);const locked=currentMode==="AUTONOMOUS"||currentMode==="MOTION";applyAccessoryLocks(locked);if(currentMode==="MANUAL"&&driveIdByState[data.drive]){const b=document.getElementById(driveIdByState[data.drive]);if(activeDrive!==b)highlightDrive(b);}else if(currentMode!=="MANUAL"||data.drive==="STOP"){clearDriveHighlight();}document.getElementById("autoBtn").textContent=currentMode==="AUTONOMOUS"?"STOP AUTO":"START AUTO";document.getElementById("motionBtn").textContent=currentMode==="MOTION"?(data.phoneCalibrated?"STOP MOTION":"CALIBRATING..."):"ENABLE MOTION";
 const f=Number(data.front),r=Number(data.rear);document.getElementById("frontValue").textContent=Number.isFinite(f)&&f>0?f.toFixed(1)+" cm":"NO ECHO";document.getElementById("rearValue").textContent=Number.isFinite(r)&&r>0?r.toFixed(1)+" cm":"NO ECHO";const ir=document.getElementById("rightIR");ir.textContent=data.rightObstacle?"BLOCKED":"CLEAR";ir.className=data.rightObstacle?"sensorValue danger":"sensorValue";document.getElementById("ldrValue").textContent=Number.isFinite(Number(data.ldr))?data.ldr:"--";const o=document.getElementById("obstacleValue");if(data.allBlocked){o.textContent="ALL BLOCKED";o.className="sensorValue danger";}else if(data.obstacle){o.textContent="DETECTED";o.className="sensorValue danger";}else{o.textContent="CLEAR";o.className="sensorValue";}
