@@ -2,9 +2,6 @@
 
 <img src="docs/images/ecorover_banner1.png" alt="EcoRover Banner" width="850"/>
 <br/><br/>
-<img src="docs/images/ecorover-app-icon.png" alt="EcoRover Logo" width="160"/>
-
-# EcoRover
 
 ### ESP32-S3 Smart Rover with Wi-Fi Control, Autonomous Navigation, Phone Motion Control, Live ESP32-CAM Streaming, Sensor Monitoring, and a Flutter Mobile Application
 
