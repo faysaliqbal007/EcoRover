@@ -1,7 +1,6 @@
 <div align="center">
 
-<img src="../docs/images/ecorover_banner.png" alt="EcoRover Banner" width="750"/>
-<br/><br/>
+
 <img src="../docs/images/ecorover-app-icon.png" alt="EcoRover App Icon" width="140"/>
 
 # EcoRover
