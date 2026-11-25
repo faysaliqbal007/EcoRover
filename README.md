@@ -15,6 +15,12 @@
 [![Tests](https://img.shields.io/badge/Unit_Tests-44_Passed-success?style=for-the-badge&logo=checkmarx)](flutter-app/test/)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 
+<br/>
+
+<img src="docs/images/IMG_2955_1.jpg" alt="The EcoRover prototype: ESP32-CAM on a pan/tilt mount, dual ultrasonic sensors and mecanum wheels" width="850"/>
+<br/>
+<sub><i>The real EcoRover prototype: ESP32-CAM on a pan/tilt mount, dual ultrasonic sensors and mecanum wheels.</i></sub>
+
 </div>
 
 ---
@@ -22,6 +28,7 @@
 ## 📖 Table of Contents
 - [Project Overview](#-project-overview)
 - [System Architecture](#-system-architecture)
+- [The Real Hardware](#-the-real-hardware)
 - [Visual Gallery & User Interfaces](#-visual-gallery--user-interfaces)
 - [Repository Structure](#-repository-structure)
 - [Subsystems & Core Features](#-subsystems--core-features)
@@ -54,7 +61,7 @@
 - **Autonomous Free-Space Navigation**: Algorithmic decision logic utilizing front/rear ultrasonic sensors and right-side infrared obstacle sensing.
 - **Phone Motion Control**: High-speed UDP stream (33 Hz) transmitting calibrated accelerometer tilt vectors with 50-sample tare normalization and packet failsafe.
 - **5-Sensor Telemetry Dashboard**: Real-time monitoring of front distance, rear distance, right IR obstacle state, ambient light (LDR), and automated headlights.
-- **Media Pipeline**: Native Android photo snapshot capture and H.264 MP4 video recording using `ffmpeg_kit_flutter_new`.
+- **Media Pipeline**: Native Android photo snapshot capture and H.264 MP4 recording using `ffmpeg_kit_flutter_new`.
 
 ---
 
@@ -104,6 +111,43 @@ The EcoRover ecosystem utilizes a multi-node, decoupled IoT architecture. The ma
 +------------------+    | • Built-in Addressable WS2812 RGB (GPIO48) & Active Buzzer (14)   |
                         +-------------------------------------------------------------------+
 ```
+
+---
+
+## 🤖 The Real Hardware
+
+Photos of the built prototype, showing the main parts of the system on the actual rover.
+
+<div align="center">
+
+<table align="center" width="100%">
+  <thead>
+    <tr>
+      <th width="50%" align="center"><b>Vision & Sensing</b></th>
+      <th width="50%" align="center"><b>Onboard Telemetry Display</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center" valign="top">
+        <img src="docs/images/IMG_3949.JPG" alt="ESP32-CAM on pan/tilt mount with dual ultrasonic sensors" width="100%"/>
+      </td>
+      <td align="center" valign="top">
+        <img src="docs/images/IMG_3160.png" alt="Front view of EcoRover showing the OLED telemetry display" width="100%"/>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" valign="top">
+        <sub><b>Camera Turret &amp; Ultrasonic Sensing</b><br/>ESP32-CAM on a servo pan/tilt mount, dual HC-SR04 ultrasonic sensors in a 3D-printed housing, and a 3D-printed bumper ring on mecanum wheels</sub>
+      </td>
+      <td align="center" valign="top">
+        <sub><b>Live OLED Readout</b><br/>The SH1106 display shows rover mode, front and rear distance, speed and obstacle status in real time</sub>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
 
 ---
 
@@ -356,6 +400,9 @@ flutter test
 - **Status Heartbeat**: Validates JSON deserialization from `/api/status` with null-safe fallbacks.
 - **Mecanum Route Generation**: Confirms exact URL strings for all 12 drive commands.
 - **UDP Motion Packet Framing**: Validates 33 Hz packet format (`x,y,z`) and sensitivity clamping.
+
+---
+
 ## 📱 Mobile App Download (APK)
 
 A pre-compiled universal production APK is available directly in the repository for immediate installation:
